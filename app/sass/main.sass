@@ -34,11 +34,12 @@ a
 	float: left
 
 
-
 // логотип
 .logo
 	display: block
-
+	padding: 20px
+	img
+		width: 100%
 
 // меню
 .menu
@@ -50,8 +51,30 @@ a
 	&__item
 		display: block
 		text-align: right
-		margin: 10px 0
-		color: #000
+		margin: 12px 0
+		color: rgba(#000, .7)
+		font-size: 14px
+		line-height: 18px
+		transition: all 0.2s ease
+		position: relative
+		&::before
+			position: absolute
+			content: ""
+			top: 9px
+			width: 0
+			right: 0
+			height: 1px
+			background-color: $accent-color
+			transform-origin: right bottom
+			transition: all ease-in-out 0.2s
+		&:hover
+			color: rgba($accent-color, 1)
+			&::before
+				width: 100%
+		&--active
+			color: rgba($accent-color, 1)
+			&::before
+				width: 100%
 
 // социалльные сети
 .soc-seti
@@ -61,14 +84,19 @@ a
 	text-align: center
 	&__item
 		display: inline-block
+		margin: 0 2px
 		.soc__link
 			display: inline-block
-			width: 20px
-			height: 20px
+			width: 30px
+			height: 30px
 			border-radius: 50%
-			background-color: $accent-color
+			background-color: rgba(#000, .4)
 			color: #fff
-			line-height: 20px
+			line-height: 30px
 			text-align: center
+			transition: all ease-in-out 0.2s
+		&:hover
+			.soc__link
+				background-color: $accent-color
 
 @import "media"
