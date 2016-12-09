@@ -27,6 +27,9 @@ p
 	font-family: "sans-regular", sans-serif
 	font-weight: normal
 
+section
+	height: 50vh
+	position: relative
 
 /////// фоновый цвет /////
 .bgc 
@@ -44,7 +47,7 @@ p
 	left: 0
 	width: 100%
 	height: 100%
-	background-color: $accent-color
+	//background-color: $accent-color
 	background-position: center center
 	background-size: cover
 	background-repeat: no-repeat
@@ -71,6 +74,7 @@ p
 	width: 180px
 	height: 100%
 	float: left
+	min-height: 400px
 
 
 // логотип
@@ -141,19 +145,48 @@ p
 				background-color: $accent-color
 
 
-// шапка
+//////////// шапка //////////
 .main-header
 	color: #fff
 	min-height: 500px
 	position: relative
 	.bgi 
 		background-color: $header-color
-		background-image: url(../img/fon1.jpg)
+		background-image: url(../img/header/fon.jpg)
 		filter: blur(1px)
 	.bgc
 		background-color: $header-color
-		opacity: 0.6
+		opacity: 0.8
 	.header-content
 		z-index: 1
+
+// слайдер шапки
+.sl-header
+	padding: 40px
+	&__img
+		max-width: 50%
+		float: left
+		img
+			width: 100%
+
+
+
+
+/////// секция О НАС /////////
+.about
+	.bgi
+		background-image: url("../img/about/bgi.png")
+		background-position: center center
+		background-repeat: repeat
+		background-color: none
+		background-size: contain
+
+	.bgc 
+		background-color: rgba($accent-color, .5)
+
+
+
+
+
 
 @import "media"
