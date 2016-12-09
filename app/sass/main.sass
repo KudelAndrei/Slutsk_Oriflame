@@ -1,14 +1,51 @@
 @import "bourbon"
 @import "vars"
 @import "libs"
-
+@import "reset"
+@import "base"
 
 a 
 	text-decoration: none
+	outline: none!important
 	&:hover, &:active, &:focus
 		text-decoration: none
 
+.hidden 
+	display: none
 
+h1, h2, h3, h4, h5, h6, .button,
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-weight: normal
+	text-transform: uppercase
+
+h1 
+	font-size: 26px
+	font-family: "sans-bold", Times, sans-serif
+p 
+	font-size: 20px 
+	font-family: "sans-regular", sans-serif
+
+
+/////// фоновый цвет /////
+.bgc 
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: $accent-color
+	z-index: 0
+
+.bgi 
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: $accent-color
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
 
 // общий стиль для body
 .main-body
@@ -57,12 +94,14 @@ a
 		line-height: 18px
 		transition: all 0.2s ease
 		position: relative
+		text-transform: uppercase
+		font-family: "sans-regular", sans-serif
 		&::before
 			position: absolute
 			content: ""
 			top: 9px
 			width: 0
-			right: 0
+			right: -10px
 			height: 1px
 			background-color: $accent-color
 			transform-origin: right bottom
@@ -98,5 +137,21 @@ a
 		&:hover
 			.soc__link
 				background-color: $accent-color
+
+
+// шапка
+.main-header
+	color: #fff
+	min-height: 500px
+	position: relative
+	.bgi 
+		background-color: $header-color
+		background-image: url(../img/fon1.jpg)
+		filter: blur(1px)
+	.bgc
+		background-color: $header-color
+		opacity: 0.6
+	.header-content
+		z-index: 1
 
 @import "media"
