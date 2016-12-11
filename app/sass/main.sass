@@ -9,6 +9,7 @@ a
 	outline: none!important
 	&:hover, &:active, &:focus
 		text-decoration: none
+		color: $accent-color
 
 .hidden 
 	display: none
@@ -62,9 +63,10 @@ section
 			left: 105%
 	&__desc
 		font-size: 18px
+		line-height: 23px
 		text-align: center
 		font-weight: 300
-		margin-bottom: 25px
+		margin-bottom: 40px
 
 
 
@@ -128,10 +130,14 @@ section
 	top: 50%	
 	right: 20px
 	transform: translateY(-50%)
-	&__item
+	li 
+		position: relative
 		display: block
 		text-align: right
-		margin: 12px 0
+	&__item
+		display: inline-block
+		text-align: right
+		margin: 6% 0
 		color: rgba(#000, .7)
 		font-size: 14px
 		line-height: 18px
@@ -139,28 +145,35 @@ section
 		position: relative
 		text-transform: uppercase
 		font-family: "sans-regular", sans-serif
-		&::before
+		&::before, &::after
 			position: absolute
 			content: ""
-			top: 9px
-			width: 0
-			right: -10px
+			width: 0px
 			height: 1px
 			background-color: $accent-color
-			transform-origin: right bottom
-			transition: all ease-in-out 0.2s
+			transition: all ease-in-out 0.3s
+			top: -2px
+		&::after
+			top: 103%
+			left: 0
 		&:hover
 			color: rgba($accent-color, 1)
+			&::before, &::after
+				width: 110%
 			&::before
-				width: 100%
+				right: 0
 		&--active
-			color: $accent-color
+			color: rgba($accent-color, 1)
+			&::before, &::after
+				width: 110%
 			&::before
-				width: 100%
+				right: 0
+
+			
 
 // социалльные сети
 .soc-seti
-	bottom: 20px
+	bottom: 30px
 	position: absolute
 	width: 100%
 	text-align: center
@@ -169,12 +182,13 @@ section
 		margin: 0 2px
 		.soc__link
 			display: inline-block
-			width: 30px
-			height: 30px
+			font-size: 16px
+			width: 25px
+			height: 25px
 			border-radius: 50%
 			background-color: rgba(#000, .4)
 			color: #fff
-			line-height: 30px
+			line-height: 25px
 			text-align: center
 			transition: all ease-in-out 0.2s
 		&:hover
@@ -232,6 +246,34 @@ section
 			border-radius: 50%
 			overflow: hidden
 			margin: 0 15px
+			position: relative
+			&::before
+				position: absolute
+				content: ""
+				width: 94%
+				height: 94%
+				border-radius: 50%
+				left: 3%
+				top: 3%
+				background-color: rgba(#fff, .9)
+				transform: scale(0)
+				transition: all 0.3s ease-in-out
+				opacity: 0
+			&:hover
+				&::before
+					transform: scale(1)
+					opacity: 1
+				i 
+					opacity: 1
+			i 
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				font-size: 30px
+				color: rgba(0,0,0, .5)
+				opacity: 0
+				transition: all ease-in-out 0.3s
 			a 
 				display: block
 			img
@@ -242,6 +284,14 @@ section
 		&__name
 			font-weight: bold
 			font-size: 28px
+			margin-top: 10px
+			margin-bottom: 20px
+		&__post
+			margin-bottom: 15px
+			font-size: 16px
+			color: rgba(255,255,255, .9)
+		&__desc
+			margin-bottom: 10px
 
 
 

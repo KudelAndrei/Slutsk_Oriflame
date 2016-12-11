@@ -22,6 +22,19 @@ $(document).ready(function() {
 		arrows: true,
 	});
 
+
+
+	// всплывающие окна
+	$('.image-popup-vertical-fit').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		mainClass: 'mfp-img-mobile',
+		image: {
+			verticalFit: true
+		}
+		
+	});
+
 	//плавный скрол в хроме
 	try {
 		$.browserSelector();
@@ -33,7 +46,7 @@ $(document).ready(function() {
 
 });
 
-
+/// акцивация меню при скроле
 $(window).scroll(function(){
 
 
