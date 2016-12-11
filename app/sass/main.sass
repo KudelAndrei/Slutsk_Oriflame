@@ -28,8 +28,45 @@ p
 	font-weight: normal
 
 section
-	height: 100vh
+	min-height: 100vh
 	position: relative
+
+
+///// общая сецкия //////
+.section	
+	color: #fff 
+	text-align: center
+	padding-bottom: 40px
+	&__head
+		font-size: 40px
+		line-height: 40px
+		display: inline-block
+		text-align: center
+		margin: 40px 0 20px
+		text-transform: uppercase
+		font-family: "sans-bold", sans-serif
+		font-weight: bold
+		position: relative
+		letter-spacing: 4px
+		&::before, &::after
+			content: ""
+			position: absolute
+			width: 90%
+			height: 1px
+			top: 50%
+			transform: translateY(-50%)
+			background-color: #FFF
+		&::before
+			right: 105%
+		&::after
+			left: 105%
+	&__desc
+		font-size: 18px
+		text-align: center
+		font-weight: 300
+		margin-bottom: 25px
+
+
 
 /////// фоновый цвет /////
 .bgc 
@@ -181,9 +218,30 @@ section
 		background-color: none
 		background-size: contain
 
-	.bgc 
+	.bgc
+		height: 100% 
 		background-color: rgba($accent-color, .5)
 
+	// слайдер
+	.sl-about
+		&__img
+			width: 400px
+			height: 400px
+			background-color: #fff
+			display: inline-block
+			border-radius: 50%
+			overflow: hidden
+			margin: 0 15px
+			a 
+				display: block
+			img
+				width: 100%
+				vertical-align: middle
+		&__content
+			text-align: left
+		&__name
+			font-weight: bold
+			font-size: 28px
 
 
 

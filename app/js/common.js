@@ -11,10 +11,15 @@ $(document).ready(function() {
 		});
 
 
-	//Слайдер 
+	//Слайдер шапки
 	$(".sl-header").slick({
 		arrows: true,
 		dots: true,
+	});
+
+	//Слайдер О НАС
+	$(".sl-about").slick({
+		arrows: true,
 	});
 
 	//плавный скрол в хроме
