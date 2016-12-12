@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// ВЫравнивание блоков по высоте
-	//$(".service-item h4").equalHeights(); 
+	$(".registration-advan__item").equalHeights(); 
 	
 	$('.menu__item').click(function(){
 			$('.menu__item').each(function(){
@@ -10,16 +10,39 @@ $(document).ready(function() {
 			$(this).addClass('menu__item--active');
 		});
 
+	// открытие регистрации
+	$('.popup-with-form').magnificPopup({
+		type: 'inline',
+		preloader: false,
+	//	focus: '#name',
+
+		// When elemened is focused, some mobile browsers in some cases zoom in
+		// It looks not nice, so we disable it:
+		callbacks: {
+			beforeOpen: function() {
+				if($(window).width() < 700) {
+					this.st.focus = false;
+				} else {
+					this.st.focus = '#name';
+				}
+			}
+		}
+	});
 
 	//Слайдер шапки
 	$(".sl-header").slick({
 		arrows: true,
 		dots: true,
+		dotsClass: "slick-dots", //указываем класс и стилизуем точки
+		prevArrow: '<div class="sl-arrow sl-arrow__left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>', // можем вставить любой элемент 
+		nextArrow: '<div class="sl-arrow sl-arrow__right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>', //по дефолту
 	});
 
 	//Слайдер О НАС
 	$(".sl-about").slick({
 		arrows: true,
+		prevArrow: '<div class="sl-arrow sl-arrow__left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>', // можем вставить любой элемент 
+		nextArrow: '<div class="sl-arrow sl-arrow__right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>', //по дефолту
 	});
 
 

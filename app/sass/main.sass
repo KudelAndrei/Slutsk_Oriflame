@@ -18,18 +18,19 @@ h1, h2, h3, h4, h5, h6, .button,
 .h1, .h2, .h3, .h4, .h5, .h6
 	font-weight: normal
 	text-transform: uppercase
+	font-family: "Noto Serif", sans-serif
 
 h1 
-	font-size: 26px
-	font-family: "sans-bold", Times, sans-serif
+	font-size: 40px
 p 
 	font-size: 14px 
 	line-height: 20px
-	font-family: "sans-regular", sans-serif
+	font-family: "Open Sans", sans-serif
 	font-weight: normal
 
+
 section
-	min-height: 100vh
+	//min-height: 50vh
 	position: relative
 
 
@@ -37,30 +38,35 @@ section
 .section	
 	color: #fff 
 	text-align: center
-	padding-bottom: 40px
+	padding-bottom: 50px
 	&__head
-		font-size: 40px
+		font-size: 36px
 		line-height: 40px
-		display: inline-block
+		display: block
 		text-align: center
 		margin: 40px 0 20px
 		text-transform: uppercase
-		font-family: "sans-bold", sans-serif
-		font-weight: bold
+		font-weight: 500
 		position: relative
 		letter-spacing: 4px
-		&::before, &::after
-			content: ""
-			position: absolute
-			width: 90%
-			height: 1px
-			top: 50%
-			transform: translateY(-50%)
-			background-color: #FFF
-		&::before
-			right: 105%
-		&::after
-			left: 105%
+		overflow: hidden
+		span 
+			display: inline-block
+			position: relative
+			&::before, &::after
+				content: ""
+				position: absolute
+				width: 500px
+				height: 1px
+				top: 50%
+				transform: translateY(-50%)
+				background-color: #FFF
+			&::before
+				left: 105%
+				margin-left: 20px
+			&::after
+				right: 105%
+				margin-right: 20px
 	&__desc
 		font-size: 18px
 		line-height: 23px
@@ -90,6 +96,75 @@ section
 	background-position: center center
 	background-size: cover
 	background-repeat: no-repeat
+
+
+// стили кнопки
+.btn
+	display: inline-block
+	padding: 12px 20px
+	background-color: $accent-color
+	color: #fff
+	font-size: 16px
+	border: none
+	transition: all ease 200ms
+	text-transform: uppercase
+	&:hover
+		background-color: darken($accent-color, 6%)
+	&:active
+		background-color: darken($accent-color, 10%)
+
+
+// стили для стрелок слайдера
+.sl-arrow
+	font-size: 40px
+	color: #fff
+	cursor: pointer
+	position: absolute
+	top: 50%
+	z-index: 5
+	opacity: .5
+	transition: all ease 0.2s
+	&:hover
+		opacity: 1
+	&__left
+		left: 3%
+	&__right
+		right: 3%
+
+// стили для дот слайдера
+.slick-dots
+	position: absolute
+	bottom: 30px
+	li
+		width: 12px
+		height: 12px
+		cursor: pointer
+		background-color: #FFF
+		border-radius: 50%
+		margin: 0 8px
+		button 
+			display: none
+
+
+.soc
+	text-align: right
+	li 
+		display: inline-block
+	&__item
+		background-color: #FFF
+		color: $accent-color
+		display: inline-block
+		width: 25px
+		height: 25px
+		text-align: center
+		line-height: 25px
+		margin: 0 2px
+		border-radius: 50%
+		transition: all ease 200ms
+		&:hover
+			background-color: $accent-color
+			color: #fff
+
 
 // общий стиль для body
 .main-body
@@ -182,11 +257,11 @@ section
 		margin: 0 2px
 		.soc__link
 			display: inline-block
-			font-size: 16px
+			font-size: 15px
 			width: 25px
 			height: 25px
 			border-radius: 50%
-			background-color: rgba(#000, .4)
+			background-color: rgba(#000, .9)
 			color: #fff
 			line-height: 25px
 			text-align: center
@@ -201,43 +276,70 @@ section
 	color: #fff
 	min-height: 500px
 	position: relative
-	.bgi 
-		background-color: $header-color
-		background-image: url(../img/header/fon.jpg)
-		filter: blur(1px)
 	.bgc
 		background-color: $header-color
-		opacity: 0.8
+		opacity: 0.2
 	.header-content
 		z-index: 1
 
 // слайдер шапки
 .sl-header
-	padding: 40px
-	&__img
-		max-width: 50%
-		float: left
-		img
-			width: 100%
+	.bgi 
+		background-color: $header-color
+		width: 100%
+		height: 100%
+		background-position: top center
+		background-size: cover
+		z-index: -1
+	&__slide
+		position: relative
+		color: #000
+		min-height: 500px
+	&__head
+		margin-top: 40px
+		margin-bottom: 30px
+		line-height: 1.2
 
 
+	// стрелки слайдера
+	.sl-arrow
+		color: #000
+
+	// dot слайдера
+	.slick-dots
+		li 
+			opacity: .7
+			background-color: #000
+			transition: all ease 200ms
+			&:hover
+				opacity: 1
+.slick-dotted.slick-slider
+	margin-bottom: 0
 
 
 /////// секция О НАС /////////
 .about
 	.bgi
-		background-image: url("../img/about/bgi.png")
+		background-image: url("../img/fon6.jpg")
 		background-position: center center
-		background-repeat: repeat
+		background-repeat: no-repeat
 		background-color: none
-		background-size: contain
-
+		background-size: cover
+		filter: blur(1px)
 	.bgc
 		height: 100% 
-		background-color: rgba($accent-color, .5)
+		background-color: rgba(#000, .2)
+	a 
+		color: $accent-color
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+
 
 	// слайдер
 	.sl-about
+		.sl-arrow
+			top: 40%
 		&__img
 			width: 400px
 			height: 400px
@@ -255,7 +357,7 @@ section
 				border-radius: 50%
 				left: 3%
 				top: 3%
-				background-color: rgba(#fff, .9)
+				background-color: rgba(#fff, .8)
 				transform: scale(0)
 				transition: all 0.3s ease-in-out
 				opacity: 0
@@ -281,6 +383,7 @@ section
 				vertical-align: middle
 		&__content
 			text-align: left
+			padding-right: 50px
 		&__name
 			font-weight: bold
 			font-size: 28px
@@ -294,6 +397,56 @@ section
 			margin-bottom: 10px
 
 
+/// сеция регистрации //////
+.registration
+	background-color: #f9f7e8
+
+	&__head
+		font-size: 22px
+		margin-left: 20px
+		margin-bottom: 20px
+		text-transform: none
+	&__desc
+		font-size: 16px
+		margin-bottom: 30px
+		margin-left: 20px
+		font-weight: 300
+	.section__head
+		span
+			&::before, &::after
+				background-color: #000
+	&__content 
+		margin-bottom: 40px
+	&-advan
+		margin-bottom: 20px
+		&__item
+			width: 30%
+			margin-left: 20px
+			margin-bottom: 30px
+			float: left
+			display: inline-block
+			transition: all ease-in-out 300ms
+			&:hover
+				transform: translateY(-5px)
+				cursor: default
+			img
+				width: 100px
+				display: block
+				float: left
+				margin-right: 15px
+				color: $accent-color
+			strong
+				font-weight: bold
+				font-size: 18px
+				margin-bottom: 10px
+				display: inline-block
+			span
+				text-transform: uppercase
+				color: $accent-color
+				font-weight: bold
+				text-decoration: underline
+	.btn-wrap
+		text-align: center
 
 
 
