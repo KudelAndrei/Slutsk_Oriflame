@@ -419,6 +419,11 @@ section
 			margin-bottom: 15px
 			img
 				width: 100%
+				transition: all ease-in-out 400ms
+			&:hover
+				border: 3px solid lighten($accent-color, 10%)
+				img
+					transform: scale(1.1)
 		&__head
 			margin-bottom: 15px
 			display: block
@@ -429,7 +434,7 @@ section
 			display: inline-block
 			opacity: .9
 			font-style: italic
-		&__desc
+		p
 			margin-bottom: 10px
 		.soc
 			text-align: center
