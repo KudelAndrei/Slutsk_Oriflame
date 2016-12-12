@@ -28,8 +28,6 @@ p
 	font-family: "Open Sans", sans-serif
 	font-weight: normal
 
-body 
-	background-color: #ccc
 
 section
 	//min-height: 50vh
@@ -98,6 +96,22 @@ section
 	background-position: center center
 	background-size: cover
 	background-repeat: no-repeat
+
+
+// стили кнопки
+.btn
+	display: inline-block
+	padding: 12px 20px
+	background-color: $accent-color
+	color: #fff
+	font-size: 16px
+	border: none
+	transition: all ease 200ms
+	text-transform: uppercase
+	&:hover
+		background-color: darken($accent-color, 6%)
+	&:active
+		background-color: darken($accent-color, 10%)
 
 
 // стили для стрелок слайдера
@@ -383,7 +397,56 @@ section
 			margin-bottom: 10px
 
 
+/// сеция регистрации //////
+.registration
+	background-color: #f9f7e8
 
+	&__head
+		font-size: 22px
+		margin-left: 20px
+		margin-bottom: 20px
+		text-transform: none
+	&__desc
+		font-size: 16px
+		margin-bottom: 30px
+		margin-left: 20px
+		font-weight: 300
+	.section__head
+		span
+			&::before, &::after
+				background-color: #000
+	&__content 
+		margin-bottom: 40px
+	&-advan
+		margin-bottom: 20px
+		&__item
+			width: 30%
+			margin-left: 20px
+			margin-bottom: 30px
+			float: left
+			display: inline-block
+			transition: all ease-in-out 300ms
+			&:hover
+				transform: translateY(-5px)
+				cursor: default
+			img
+				width: 100px
+				display: block
+				float: left
+				margin-right: 15px
+				color: $accent-color
+			strong
+				font-weight: bold
+				font-size: 18px
+				margin-bottom: 10px
+				display: inline-block
+			span
+				text-transform: uppercase
+				color: $accent-color
+				font-weight: bold
+				text-decoration: underline
+	.btn-wrap
+		text-align: center
 
 
 

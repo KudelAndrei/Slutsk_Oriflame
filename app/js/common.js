@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// ВЫравнивание блоков по высоте
-	//$(".service-item h4").equalHeights(); 
+	$(".registration-advan__item").equalHeights(); 
 	
 	$('.menu__item').click(function(){
 			$('.menu__item').each(function(){
@@ -10,6 +10,24 @@ $(document).ready(function() {
 			$(this).addClass('menu__item--active');
 		});
 
+	// открытие регистрации
+	$('.popup-with-form').magnificPopup({
+		type: 'inline',
+		preloader: false,
+	//	focus: '#name',
+
+		// When elemened is focused, some mobile browsers in some cases zoom in
+		// It looks not nice, so we disable it:
+		callbacks: {
+			beforeOpen: function() {
+				if($(window).width() < 700) {
+					this.st.focus = false;
+				} else {
+					this.st.focus = '#name';
+				}
+			}
+		}
+	});
 
 	//Слайдер шапки
 	$(".sl-header").slick({
