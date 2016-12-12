@@ -15,11 +15,16 @@ $(document).ready(function() {
 	$(".sl-header").slick({
 		arrows: true,
 		dots: true,
+		dotsClass: "slick-dots", //указываем класс и стилизуем точки
+		prevArrow: '<div class="sl-arrow sl-arrow__left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>', // можем вставить любой элемент 
+		nextArrow: '<div class="sl-arrow sl-arrow__right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>', //по дефолту
 	});
 
 	//Слайдер О НАС
 	$(".sl-about").slick({
 		arrows: true,
+		prevArrow: '<div class="sl-arrow sl-arrow__left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>', // можем вставить любой элемент 
+		nextArrow: '<div class="sl-arrow sl-arrow__right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>', //по дефолту
 	});
 
 
