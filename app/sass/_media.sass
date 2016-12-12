@@ -10,7 +10,78 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.panel-left
+		position: relative
+		width: 100%
+		min-height: 72px
+		.logo
+			float: left
+		.menu
+			display: none
+			position: absolute
+			top: 225px
+			width: 100%
+			z-index: 100
+			background-color: #FFF
+			li 
+				text-align: left
+				a 
+					display: block
+					margin: 0
+					padding: 10px 20px
+					&:hover
+						background-color: rgba($accent-color, 0.8)
+						color: #fff
+					&::before, &::after
+						display: none
+					&.menu__item--active
+						color: #fff
+						background-color: $accent-color
+		.soc-seti
+			display: none
+		nav
+			display: inline-block
+			float: right
+			width: 200px
+			margin-right: 22px
+			position: relative
+			.toggle-menu
+				right: 20px
+				top: 20px
+				padding: 18px 26px
+				cursor: pointer
+				display: inline-block
+				position: absolute
+				span
+					width: 50px
+					display: block
+					height: 2px
+					background-color: #000
+					position: absolute
+					transition: all ease-in-out 0.3s
+					transform-origin: 50% 50%
+					top: 0
+					left: 0
+					&:nth-child(1)
+						transition-delay: 100ms
+					&:nth-child(2)
+						top: 14px
+					&:nth-child(3)
+						top: 28px
+				&.on 
+					span 
+						transform: rotate(135deg)
+						&:nth-child(1)
+							left: -200%
+							opacity: 0
+							transform: scale(0)
+						&:nth-child(3)
+							transform: rotate(-134deg)
+							top: 16px
+	
+	.panel-right
+		margin: 0
+		width: 100%
 
 
 /* Small Devices, Tablets */
@@ -47,7 +118,11 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	/**/
+	.panel-left
+		.menu
+			display: block!important
+		.soc-seti	
+			display: block!important
 
 
 /* Large Devices, Wide Screens */

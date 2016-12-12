@@ -110,8 +110,10 @@ section
 	text-transform: uppercase
 	&:hover
 		background-color: darken($accent-color, 6%)
-	&:active
+		color: #fff
+	&:active, &:focus
 		background-color: darken($accent-color, 10%)
+		color: #fff
 
 
 // стили для стрелок слайдера
@@ -195,6 +197,7 @@ section
 .logo
 	display: block
 	padding: 20px
+	max-width: 200px
 	img
 		width: 100%
 
@@ -244,7 +247,10 @@ section
 			&::before
 				right: 0
 
-			
+// мобильное меню
+.toggle-menu
+	display: block
+
 
 // социалльные сети
 .soc-seti
@@ -396,6 +402,45 @@ section
 		&__desc
 			margin-bottom: 10px
 
+/// секция ОТЗЫВЫ ////
+.reviews
+	padding-bottom: 45px
+	.sl-reviews
+		text-align: center
+		&__slide
+			padding: 0 45px
+		&__img
+			display: inline-block
+			border: 3px solid $accent-color
+			width: 200px
+			height: 200px
+			border-radius: 50%
+			overflow: hidden
+			margin-bottom: 15px
+			img
+				width: 100%
+		&__head
+			margin-bottom: 15px
+			display: block
+			font-weight: bold
+			text-transform: none
+		&__post
+			margin-bottom: 10px
+			display: inline-block
+			opacity: .9
+			font-style: italic
+		&__desc
+			margin-bottom: 10px
+		.soc
+			text-align: center
+			li 
+				a
+					background-color: $accent-color
+					color: #fff
+					&:hover
+						background-color: darken($accent-color, 10%)
+
+
 
 /// сеция регистрации //////
 .registration
@@ -419,27 +464,58 @@ section
 		margin-bottom: 40px
 	&-advan
 		margin-bottom: 20px
+		text-align: center
 		&__item
-			width: 30%
+			width: 350px
 			margin-left: 20px
-			margin-bottom: 30px
-			float: left
+			margin-bottom: 100px
+			margin-top: 80px
+			padding: 90px 15px 0
+			background-color: #fff
 			display: inline-block
 			transition: all ease-in-out 300ms
+			vertical-align: top
+			text-align: center
+			position: relative
+			&::before
+				content: ""
+				position: absolute
+				top: -80px;
+				left: 0
+				width: 100%
+				height: 0
+				border-left: 174px solid transparent
+				border-right:  176px solid transparent
+				border-bottom: 80px solid #fff
+			&::after
+				content: ""
+				position: absolute
+				bottom: -80px
+				left: 0
+				width: 0
+				height: 0
+				border-left: 174px solid transparent
+				border-right: 176px solid transparent
+				border-top: 80px solid #fff
 			&:hover
 				transform: translateY(-5px)
 				cursor: default
 			img
 				width: 100px
-				display: block
-				float: left
+				display: inline-block
 				margin-right: 15px
+				margin-bottom: 12px
 				color: $accent-color
+				position: absolute
+				top: -25px
+				left: 50%
+				transform: translateX(-50%)
 			strong
 				font-weight: bold
-				font-size: 18px
+				font-size: 24px
+				font-style: italic
 				margin-bottom: 10px
-				display: inline-block
+				display: block
 			span
 				text-transform: uppercase
 				color: $accent-color

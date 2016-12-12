@@ -10,14 +10,25 @@ $(document).ready(function() {
 			$(this).addClass('menu__item--active');
 		});
 
+
+	// мобильное меню
+	$(".toggle-menu").click(function(){
+		$(this).toggleClass("on");
+		$(".menu-mobile").slideToggle();
+	});
+
+	$(".menu__item").click(function(){
+		$('.menu-mobile').slideToggle();
+		$(".toggle-menu").toggleClass("on");
+	});
+
+
+
 	// открытие регистрации
 	$('.popup-with-form').magnificPopup({
 		type: 'inline',
 		preloader: false,
 	//	focus: '#name',
-
-		// When elemened is focused, some mobile browsers in some cases zoom in
-		// It looks not nice, so we disable it:
 		callbacks: {
 			beforeOpen: function() {
 				if($(window).width() < 700) {
@@ -40,6 +51,13 @@ $(document).ready(function() {
 
 	//Слайдер О НАС
 	$(".sl-about").slick({
+		arrows: true,
+		prevArrow: '<div class="sl-arrow sl-arrow__left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>', // можем вставить любой элемент 
+		nextArrow: '<div class="sl-arrow sl-arrow__right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>', //по дефолту
+	});
+
+	//Слайдер ОТЗЫВЫ
+	$(".sl-reviews").slick({
 		arrows: true,
 		prevArrow: '<div class="sl-arrow sl-arrow__left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>', // можем вставить любой элемент 
 		nextArrow: '<div class="sl-arrow sl-arrow__right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>', //по дефолту
