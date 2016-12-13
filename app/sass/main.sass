@@ -417,9 +417,10 @@ section
 			border-radius: 50%
 			overflow: hidden
 			margin-bottom: 15px
+			transition: all ease 400ms
 			img
 				width: 100%
-				transition: all ease-in-out 400ms
+				transition: all ease 300ms
 			&:hover
 				border: 3px solid lighten($accent-color, 10%)
 				img
@@ -444,10 +445,14 @@ section
 					color: #fff
 					&:hover
 						background-color: darken($accent-color, 10%)
+	.section__head
+		span
+			&::before, &::after
+				background-color: #000
 
 
 
-/// сеция регистрации //////
+/// сеция РЕГИСТРАЦИИ //////
 .registration
 	background-color: #f9f7e8
 
@@ -529,6 +534,15 @@ section
 	.btn-wrap
 		text-align: center
 
+////  секция ОБРАТНОЙ СВЯЗИ /////
+.write
+	.bgi 
+		background-attachment: fixed
 
+
+/// секция КОНТАКТЫ ////
+.contact
+	background-color: #434a54
+	color: #fff
 
 @import "media"
