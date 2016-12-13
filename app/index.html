@@ -162,10 +162,8 @@
 
 					<!-- секция О НАС -->
 					<section id="about"  class="about section">
-<<<<<<< HEAD
+
 						<div class="bgi"></div> <!-- фон  картинка -->
-=======
->>>>>>> e6b29ac036ea651c9f62d26a23799e3c529dbb46
 						<div class="bgc"></div> <!-- затемненный фон -->
 						
 						<div class="row">
@@ -236,11 +234,37 @@
 
 						<div class="row">
 							<div class="col-lg-8 col-lg-offset-2">
-								<h2 class="section__head"><span>Новости</span></h2>
+								<h2 class="section__head"><span>Новости mix</span></h2>
 								<p class="section__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Которое заглавных путь собрал дал?</p>
 							</div>
 							<div class="col-lg-12">
-								контент
+
+								<!-- фильтры для плиток -->
+								<ul class="mixblock-filters">
+									<li class="filter mixblock-filters__filter active" data-filter="all">все</li>
+									<li class="filter mixblock-filters__filter" data-filter=".category-1">Категория1</li>
+									<li class="filter mixblock-filters__filter" data-filter=".category-2">Категория2</li>
+									<li class="filter mixblock-filters__filter" data-filter=".category-3">Категория3</li>
+									<li class="filter mixblock-filters__filter" data-filter=".category-4">Категория4</li>
+								</ul>
+
+								<!-- сортировка -->
+								<span class="sort active" data-sort="random">Random</span>
+								<span class="sort" data-sort="my-order:asc">Ascending Order</span>
+								<span class="sort" data-sort="my-order:desc">Descending Order</span>
+
+								<!-- плитки -->
+								<div class="mixblock">
+									<div class="mix mixblock__item category-1"> 
+										контент
+									</div> 
+									<div class="mix mixblock__item category-1"> 
+										контентк
+									</div> 
+									<div class="mix mixblock__item category-1"> 
+										контентк
+									</div> 
+								</div>
 							</div>
 						</div>
 
@@ -427,6 +451,15 @@
 		<iframe src="https://by.oriflame.com/business-opportunity/become-c.." scrolling="no" frameborder="0" width="450" height="1400"></iframe>
 	</div>
 
+	<!-- mixtup -->
+	<script>
+		// плитки
+		var mixer = mixitup('.mixblock', {
+		 controls: {
+		     toggleLogic: 'and'
+		    }
+		});
+	</script>
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[
 		{"src" : "js/libs.min.js", "async" : false},
