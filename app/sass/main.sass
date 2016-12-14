@@ -332,16 +332,7 @@ section
 
 /////// секция О НАС /////////
 .about
-	.bgi
-		background-image: url("../img/fon6.jpg")
-		background-position: center center
-		background-repeat: no-repeat
-		background-color: none
-		background-size: cover
-		filter: blur(1px)
-	.bgc
-		height: 100% 
-		background-color: rgba(#000, .2)
+	background-color: #434a54
 	a 
 		color: $accent-color
 		text-decoration: underline
@@ -468,6 +459,19 @@ figure.sl-about__img.hover img
 	transform: scale(1.15)
 
 /// секция НОВОСТИ ////
+.new
+	background-color: #434a54
+	position: relative
+	overflow: hidden
+	&::before
+		position: absolute
+		content: ""
+		top: 0
+		right: 
+		background-color: lighten(#434a54, 3%)
+		transform:  skewX(-30deg)
+		width: 60%
+		height: 100%
 //плитки
 .mixblock
 	margin-bottom: 20px
@@ -514,7 +518,7 @@ figure.sl-about__img.hover img
 /// секция ОТЗЫВЫ ////
 .reviews
 	padding-bottom: 45px
-	background-color: #F5F7FA
+	background-color: #f9f9f9
 	.section__head
 		span
 			&::before, &::after
@@ -570,12 +574,13 @@ figure.sl-about__img.hover img
 
 	.sl-arrow
 		color: #000
+		top: 35%
 
 
 
 /// сеция РЕГИСТРАЦИИ //////
 .registration
-	background-color: #f9f7e8
+	background-color: #fff
 
 	&__head
 		font-size: 22px
@@ -602,22 +607,23 @@ figure.sl-about__img.hover img
 			margin-bottom: 100px
 			margin-top: 80px
 			padding: 90px 15px 0
-			background-color: #fff
+			background-color: #f9f9f9
 			display: inline-block
 			transition: all ease-in-out 300ms
 			vertical-align: top
 			text-align: center
 			position: relative
+			box-shadow: 3px 12px 70px -28px rgba(122,118,133,0.2)
 			&::before
 				content: ""
 				position: absolute
-				top: -80px;
+				top: -80px
 				left: 0
 				width: 100%
 				height: 0
 				border-left: 174px solid transparent
 				border-right:  176px solid transparent
-				border-bottom: 80px solid #fff
+				border-bottom: 80px solid #f9f9f9
 			&::after
 				content: ""
 				position: absolute
@@ -627,10 +633,11 @@ figure.sl-about__img.hover img
 				height: 0
 				border-left: 174px solid transparent
 				border-right: 176px solid transparent
-				border-top: 80px solid #fff
+				border-top: 80px solid #f9f9f9
 			&:hover
-				transform: translateY(-5px)
+				transform: translateY(-4px)
 				cursor: default
+				box-shadow: 2px 4px 37px -8px rgba(122,118,133,0.3)
 			img
 				width: 100px
 				display: inline-block
