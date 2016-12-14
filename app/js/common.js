@@ -3,6 +3,12 @@ $(document).ready(function() {
 	// ВЫравнивание блоков по высоте
 	$(".registration-advan__item").equalHeights(); 
 	
+
+	/// плитки
+	$(".mixblock").mixItUp();
+
+
+	// mobile menu
 	$('.menu__item').click(function(){
 			$('.menu__item').each(function(){
 			$(this).removeClass('menu__item--active');
@@ -21,7 +27,12 @@ $(document).ready(function() {
 		$(".toggle-menu").toggleClass("on");
 	});
 
-
+	/// tab
+	$(".tab_item").not(":first").hide();
+	$(".wrapper .tab").click(function() {
+		$(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".tab_item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
 
 	// открытие регистрации
 	$('.popup-with-form').magnificPopup({
@@ -143,11 +154,4 @@ $(window).scroll(function(){
 		//анимируем переход на расстояние - top за 1500 мс
 		$('body,html').animate({scrollTop: top}, 1000 );
 
-});
-
-// плитки
-var mixer = mixitup('.mixblock', {
- controls: {
-     toggleLogic: 'and'
-    }
 });

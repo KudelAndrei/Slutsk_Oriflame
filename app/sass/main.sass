@@ -467,6 +467,49 @@ figure.sl-about__img.hover img
 	opacity: 0.50
 	transform: scale(1.15)
 
+/// секция НОВОСТИ ////
+//плитки
+.mixblock
+	margin-bottom: 20px
+	&-filters
+		font-size: em(18)
+		font-family: "Work Sans", sans-serif
+		padding-bottom: 30px
+		&__filter
+			display: inline-block
+			padding: 0 7px
+			cursor: pointer
+			border-radius: 8px
+			text-transform: uppercase
+			margin: 5px 5px
+			&:hover
+				box-shadow: 0 0 0 2px #fff
+			&.active
+				background-color: $accent-color
+				color: #000
+	&__item
+		width: 28%
+		height: auto
+		margin: 0 20px 30px
+		display: none
+		position: relative
+		overflow: hidden
+		img
+			width: 100%
+			transition: all 1s ease
+			h4
+		&:hover
+			.mixblock__item--hover
+				height: 100%
+				opacity: 1
+				z-index: 10
+			.hever-wrap
+				top: 50%
+			img
+				transform: scale(1.1)
+				transition: all 5s ease-out
+
+
 
 /// секция ОТЗЫВЫ ////
 .reviews
@@ -628,7 +671,12 @@ figure.sl-about__img.hover img
 		font-size: 14px
 		padding: 10px 0
 		background-color: darken(#434a54, 5%)
-
+	&-bottom
+		padding: 20px 15px
+	&-soc
+		position: relative
+		width: auto
+		bottom: 0
 
 @import "media"
 

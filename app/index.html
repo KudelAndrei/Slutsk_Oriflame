@@ -264,21 +264,19 @@
 									<li class="filter mixblock-filters__filter" data-filter=".category-4">Категория4</li>
 								</ul>
 
-								<!-- сортировка -->
-								<span class="sort active" data-sort="random">Random</span>
-								<span class="sort" data-sort="my-order:asc">Ascending Order</span>
-								<span class="sort" data-sort="my-order:desc">Descending Order</span>
-
 								<!-- плитки -->
 								<div class="mixblock">
 									<div class="mix mixblock__item category-1"> 
-										контент
+										контент 1
 									</div> 
-									<div class="mix mixblock__item category-1"> 
-										контентк
+									<div class="mix mixblock__item category-2"> 
+										контентк 2
 									</div> 
-									<div class="mix mixblock__item category-1"> 
-										контентк
+									<div class="mix mixblock__item category-3"> 
+										контентк 3
+									</div> 
+									<div class="mix mixblock__item category-4"> 
+										контентк 4
 									</div> 
 								</div>
 							</div>
@@ -451,8 +449,36 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-12">
-								content
+							<div class="contact-bottom clearfix">
+								<div class="col-lg-4">
+									<!-- логотип -->
+									<div class="logo">
+										<a href="#"><img src="img/logo.svg" alt="Slutsk Oriflame"></a>
+									</div>
+									<p class="logo__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+								</div>
+								<div class="col-lg-4">
+								<!-- ТЕЛЕФОНЫ -->
+									<div class="wrapper">
+										 <div class="tabs">
+											  <span class="tab">Наталья Вечер</span>
+											  <span class="tab">Олег Боярин</span>     
+										 </div>
+										 <div class="tab_content">
+											  <div class="tab_item">8029 898 898 88</div>
+											  <div class="tab_item">23123 12312312 </div>
+										 </div>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<!-- социальные сети -->
+									<ul class="soc-seti contact-soc">
+										<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+										<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
 							</div>
 							<div class="col-lg-12">
 							<p class="copyright">© Copyright 2016</p></div>
@@ -468,15 +494,6 @@
 		<iframe src="https://by.oriflame.com/business-opportunity/become-c.." scrolling="no" frameborder="0" width="450" height="1400"></iframe>
 	</div>
 
-	<!-- mixtup -->
-	<script>
-		// плитки
-		var mixer = mixitup('.mixblock', {
-		 controls: {
-				 toggleLogic: 'and'
-				}
-		});
-	</script>
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[
 		{"src" : "js/libs.min.js", "async" : false},
