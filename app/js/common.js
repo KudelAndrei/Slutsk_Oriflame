@@ -10,7 +10,6 @@ $(document).ready(function() {
 			$(this).addClass('menu__item--active');
 		});
 
-
 	// мобильное меню
 	$(".toggle-menu").click(function(){
 		$(this).toggleClass("on");
@@ -109,11 +108,6 @@ $(window).scroll(function(){
 			$(".menu li a[href*=new]").addClass('menu__item--active');
 		}
 
-		if(wScroll > $('#shares').offset().top - 100) {
-			$('.menu li a').parent().children().removeClass('menu__item--active');
-			$(".menu li a[href*=shares]").addClass('menu__item--active');
-		}
-
 		if(wScroll > $('#reviews').offset().top - 100) {
 			$('.menu li a').parent().children().removeClass('menu__item--active');
 			$(".menu li a[href*=reviews]").addClass('menu__item--active');
@@ -149,4 +143,11 @@ $(window).scroll(function(){
 		//анимируем переход на расстояние - top за 1500 мс
 		$('body,html').animate({scrollTop: top}, 1000 );
 
+});
+
+// плитки
+var mixer = mixitup('.mixblock', {
+ controls: {
+     toggleLogic: 'and'
+    }
 });

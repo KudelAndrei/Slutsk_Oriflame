@@ -146,7 +146,9 @@ section
 		margin: 0 8px
 		button 
 			display: none
-
+		&.slick-active
+			background-color: $accent-color
+	
 
 .soc
 	text-align: right
@@ -319,9 +321,14 @@ section
 			transition: all ease 200ms
 			&:hover
 				opacity: 1
+			&.slick-active
+				background-color: $accent-color
 .slick-dotted.slick-slider
 	margin-bottom: 0
 
+//// секция НОВОСТИ ////
+.new
+	background-color: #ccc
 
 /////// секция О НАС /////////
 .about
@@ -344,55 +351,122 @@ section
 	// слайдер
 	.sl-about
 		.sl-arrow
-			top: 40%
-		&__img
-			width: 400px
-			height: 400px
-			background-color: #fff
-			display: inline-block
-			border-radius: 50%
-			overflow: hidden
-			margin: 0 15px
-			transition: all ease-in-out 300ms
-			margin: 5px 0
-			position: relative
-			img 
-				transition: all ease-in-out 500ms
-			&:hover
-				box-shadow: 0 0 0px 1px $accent-color
-				img 
-					transform: scale(1.3)
-					filter: blur(6px)
-				i 
-					opacity: 1
-			i 
-				position: absolute
-				top: 50%
-				left: 50%
-				transform: translate(-50%, -50%)
-				font-size: 30px
-				color: $accent-color
-				opacity: 0
-				transition: all ease-in-out 0.3s
-			a 
-				display: block
-			img
-				width: 100%
-				vertical-align: middle
+			top: 30%
 		&__content
 			text-align: left
 			padding-right: 50px
-		&__name
-			font-weight: bold
-			font-size: 28px
-			margin-top: 10px
-			margin-bottom: 20px
 		&__post
 			margin-bottom: 15px
 			font-size: 16px
 			color: rgba(255,255,255, .9)
 		&__desc
 			margin-bottom: 10px
+		.soc 
+			text-align: left
+
+// Картинка 
+figure.sl-about__img 
+	font-family: 'Raleway', Arial, sans-serif
+	position: relative
+	float: left
+	overflow: hidden
+	margin: 10px 1%
+	max-width: 100%
+	min-width: 220px
+	background: #000000
+	color: #ffffff
+	text-align: center
+	margin: 0
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+
+figure.sl-about__img * 
+	box-sizing: border-box
+	transition: all 0.45s ease-in-out
+
+figure.sl-about__img img 
+	max-width: 100%
+	position: relative
+	opacity: 1
+
+figure.sl-about__img figcaption 
+	position: absolute
+	top: 20px
+	left: 20px
+	right: 20px
+	bottom: 20px
+	border: 1px solid white
+	border-width: 0 1px
+
+figure.sl-about__img .heading 
+	overflow: hidden
+	transform: translateY(-50%)
+
+figure.sl-about__img .caption
+	overflow: hidden
+	transform: translateY(50%)
+	position: absolute
+	width: 100%
+	bottom: 0
+
+figure.sl-about__img h3,
+figure.sl-about__img p 
+	display: table
+	margin: 0 auto
+	padding: 0 10px
+	position: relative
+	text-align: center
+	width: auto
+	text-transform: uppercase
+	font-weight: 400
+
+figure.sl-about__img h3 span,
+figure.sl-about__img p span 
+	font-weight: 800
+
+figure.sl-about__img h3:before,
+figure.sl-about__img p:before,
+figure.sl-about__img h3:after,
+figure.sl-about__img p:after 
+	position: absolute
+	display: block
+	width: 1000%
+	height: 1px
+	content: ''
+	background-color: white
+
+figure.sl-about__img h3:before,
+figure.sl-about__img p:before 
+	left: -1000%
+
+figure.sl-about__img h3:after,
+figure.sl-about__img p:after 
+	right: -1000%
+
+figure.sl-about__img h3:before,
+figure.sl-about__img h3:after 
+	top: 50%
+
+figure.sl-about__img p 
+	font-size: 0.8em
+	font-weight: 500
+
+figure.sl-about__img p:before,
+figure.sl-about__img p:after
+	bottom: 50%
+
+figure.sl-about__img a 
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	position: absolute
+	z-index: 1
+
+figure.sl-about__img:hover img,
+figure.sl-about__img.hover img 
+	opacity: 0.50
+	transform: scale(1.15)
+
 
 /// секция ОТЗЫВЫ ////
 .reviews
@@ -414,18 +488,20 @@ section
 			border-radius: 50%
 			overflow: hidden
 			margin-bottom: 15px
+			transition: all ease-in-out 300ms
+			margin-top: 10px
 			a
 				display: block
 			img
 				width: 100%
-				transition: all ease-in-out 400ms
 				display: block
-				&:hover
-					transform: scale(1.1)
-					.sl-reviews__img
-						border: 3px solid lighten($accent-color, 10%)
+			&:hover
+				border: 3px solid lighten($accent-color, 10%)
+				transform: scale(1.05)
+
 		&__head
 			margin-bottom: 15px
+			font-size: 18px
 			display: block
 			font-weight: bold
 			text-transform: none
@@ -444,13 +520,17 @@ section
 					color: #fff
 					&:hover
 						background-color: darken($accent-color, 10%)
+	.section__head
+		span
+			&::before, &::after
+				background-color: #000
 
 	.sl-arrow
 		color: #000
 
 
 
-/// сеция регистрации //////
+/// сеция РЕГИСТРАЦИИ //////
 .registration
 	background-color: #f9f7e8
 
@@ -532,6 +612,24 @@ section
 	.btn-wrap
 		text-align: center
 
+////  секция ОБРАТНОЙ СВЯЗИ /////
+.write
+	.bgi 
+		background-attachment: fixed
+
+
+/// секция КОНТАКТЫ ////
+.contact
+	background-color: #434a54
+	color: #fff
+	.copyright
+		display: block
+		text-align: center
+		font-size: 14px
+		padding: 10px 0
+		background-color: darken(#434a54, 5%)
 
 
 @import "media"
+
+
