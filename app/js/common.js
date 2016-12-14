@@ -89,10 +89,10 @@ $(document).ready(function() {
 	//плавный скрол в хроме
 	try {
 		$.browserSelector();
-		if($("html").hasClass("chrome")) {
-			$.smoothScroll();
-		}
-	} catch(err) {
+			if($("html").hasClass("chrome")) {
+				$.smoothScroll();
+			}
+		} catch(err) {
 	};
 
 });

@@ -66,9 +66,7 @@
 			<div class="panel-left">
 				
 				<!-- логотип -->
-				<div class="logo">
-					<a href="#"><img src="img/logo.svg" alt="Slutsk Oriflame"></a>
-				</div>
+				<a href="#" class="logo"><img src="img/logo.svg" alt="Slutsk Oriflame"></a>
 				
 				<!-- меню -->
 				<nav>
@@ -92,10 +90,10 @@
 
 				<!-- социальные сети -->
 				<ul class="soc-seti">
-					<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
-					<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+					<li class="soc-seti__item"><a href="#" class="soc__link" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+					<li class="soc-seti__item"><a href="#" class="soc__link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li class="soc-seti__item"><a href="#" class="soc__link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li class="soc-seti__item"><a href="#" class="soc__link" target="_blank"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
 				</ul>
 
 			</div>
@@ -269,6 +267,12 @@
 									<div class="mix mixblock__item category-1"> 
 										контент 1
 									</div> 
+									<div class="mix mixblock__item category-1"> 
+										контент 1
+									</div> 
+									<div class="mix mixblock__item category-1"> 
+										контент 1
+									</div> 
 									<div class="mix mixblock__item category-2"> 
 										контентк 2
 									</div> 
@@ -394,7 +398,7 @@
 					<!-- секция НАПИСАТЬ НАМ -->
 					<section id="write"  class="write">
 						
-						<div class="bgi" style="background-image: url(img/write.jpg);"></div>
+						<!--  <div class="bgi" style="background-image: url(img/write.jpg);"></div>-->
 
 						<div class="row">
 							<div class="col-lg-8 col-lg-offset-2">
@@ -403,7 +407,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-lg-5 col-lg-offset-1">
 								<h3 class="write-head">Lorem ipsum dolor sit amet.</h3>
 								<ul class="write-qustion">
 									<li class="write-qustion__item"><i class="fa fa-check" aria-hidden="true"></i>Lorem ipsum dolor sit amet.</li>
@@ -416,16 +420,16 @@
 									<li class="write-qustion__item"><i class="fa fa-check" aria-hidden="true"></i>Minus voluptatem ratione, qui tempore.</li>
 								</ul>
 							</div>
-							<div class="col-lg-6">
-								<form action="">
+							<div class="col-lg-5">
+								<form action="" class="write-form">
 									<label for="" >
-										<input type="text" placeholder="Введите ваше имя...">
+										<input type="text" placeholder="Введите ваше имя..." required="">
 									</label>
 									<label for="" >
-										<input type="text" placeholder="Введите ваше mail...">
+										<input type="text" placeholder="Введите ваше mail..." required="">
 									</label>
 									<label for="">
-										<textarea placeholder="Введите сообщение..."></textarea>
+										<textarea placeholder="Введите сообщение..." required=""></textarea>
 									</label>
 									<button class="btn">Отправить</button>
 								</form>
@@ -450,34 +454,50 @@
 						</div>
 						<div class="row">
 							<div class="contact-bottom clearfix">
-								<div class="col-lg-4">
-									<!-- логотип -->
-									<div class="logo">
-										<a href="#"><img src="img/logo.svg" alt="Slutsk Oriflame"></a>
+								<div class="col-lg-3 col-lg-offset-1">
+									<div class="wrap-logo">
+										<!-- логотип -->
+										<a href="#" class="logo"><img src="img/logo-footer.svg" alt="Slutsk Oriflame"></a>
+										<p class="logo__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 									</div>
-									<p class="logo__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 								</div>
-								<div class="col-lg-4">
+								<div class="col-lg-4 col-lg-offset-1">
 								<!-- ТЕЛЕФОНЫ -->
 									<div class="wrapper">
+
 										 <div class="tabs">
-											  <span class="tab">Наталья Вечер</span>
-											  <span class="tab">Олег Боярин</span>     
+											  <span class="tab">МТС</span>
+											  <span class="tab">Velcome</span>     
+											  <span class="tab">Life</span>     
 										 </div>
-										 <div class="tab_content">
-											  <div class="tab_item">8029 898 898 88</div>
-											  <div class="tab_item">23123 12312312 </div>
+
+										<div class="tab_content">
+											<div class="tab_item">
+												<a href="tel:80290001122"><span>Наталья</span> 8(029) 999-88-00 </a>
+												<a href="tel:80290001122"><span>Олег</span> 8(029) 999-88-01 </a>
+											</div>
+											<div class="tab_item">
+												<a href="tel:80290001122"><span>Наталья</span> 8(029) 999-88-34 </a>
+												<a href="tel:80290001122"><span>Олег</span> 8(029) 999-88-13 </a>
+											</div>
+											<div class="tab_item">
+												<a href="tel:80290001122"><span>Наталья</span> 8(029) 999-88-21 </a>
+												<a href="tel:80290001122"><span>Олег</span> 8(029) 999-88-56 </a>
+											</div>
 										 </div>
 									</div>
 								</div>
-								<div class="col-lg-4">
+								<div class="col-lg-3">
 									<!-- социальные сети -->
-									<ul class="soc-seti contact-soc">
-										<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
-										<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-										<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-										<li class="soc-seti__item"><a href="#" class="soc__link"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
-									</ul>
+									<div class="contact-soc">
+										<h3 class="contact-soc__head">Мы в социальных сетях:</h3>
+										<ul class="soc-seti">
+											<li class="soc-seti__item"><a href="#" class="soc__link" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+											<li class="soc-seti__item"><a href="#" class="soc__link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+											<li class="soc-seti__item"><a href="#" class="soc__link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+											<li class="soc-seti__item"><a href="#" class="soc__link" target="_blank"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-12">
