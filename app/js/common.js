@@ -1,12 +1,21 @@
 $(document).ready(function() {
 
+	// мобильное меню при изменении экрана
+	$(window).on('load resize', windowSize); /// иницилизация функции
+	// Добавление класса мобильное меню
+	function windowSize(){
+		if ($(window).width() <= '993'){
+				$('.menu').addClass("menu-mobile");
+		} else {
+				$('.menu').removeClass("menu-mobile");
+		}
+	}
+
 	// ВЫравнивание блоков по высоте
 	$(".registration-advan__item").equalHeights(); 
-	
 
 	/// плитки
 	$(".mixblock").mixItUp();
-
 
 	// mobile menu
 	$('.menu__item').click(function(){
@@ -19,13 +28,19 @@ $(document).ready(function() {
 	// мобильное меню
 	$(".toggle-menu").click(function(){
 		$(this).toggleClass("on");
-		$(".menu-mobile").slideToggle();
+		$(".menu.menu-mobile").slideToggle();
 	});
-
 	$(".menu__item").click(function(){
-		$('.menu-mobile').slideToggle();
+		$('.menu.menu-mobile').slideToggle();
 		$(".toggle-menu").toggleClass("on");
 	});
+	// функция для закрытия меню при изменении экрана
+	function mobile(){
+		$(".toggle-menu").removeClass("on");
+		$(".menu.menu-mobile").slideUp();
+	};
+	// инифилизация функции
+	$(window).on("resize", mobile);
 
 	/// tab
 	$(".tab_item").not(":first").hide();
@@ -74,7 +89,6 @@ $(document).ready(function() {
 	});
 
 
-
 	// всплывающие окна
 	$('.image-popup-vertical-fit').magnificPopup({
 		type: 'image',
@@ -100,9 +114,8 @@ $(document).ready(function() {
 /// акцивация меню при скроле
 $(window).scroll(function(){
 
-
 		var wScroll = $(this).scrollTop();
-	  
+		
 		/// навигация по сайту
 		if(wScroll > $('#header').offset().top - 100) {
 			$('.menu li a').parent().children().removeClass('menu__item--active');
@@ -138,8 +151,6 @@ $(window).scroll(function(){
 			$('.menu li a').parent().children().removeClass('menu__item--active');
 			$(".menu li a[href*=contact]").addClass('menu__item--active');
 		}
-
-
 
 	});
 

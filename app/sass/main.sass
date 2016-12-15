@@ -470,13 +470,14 @@ figure.sl-about__img.hover img
 		right: 
 		background-color: lighten(#434a54, 3%)
 		transform:  skewX(-30deg)
-		width: 60%
+		width: 100%
 		height: 100%
 // стили кнопок
 .mixblock-filters * 
 	box-sizing: border-box
 
 .mixblock-filters
+	margin-bottom: 30px
 	&__filter 
 		display: inline-block
 		margin: 0 1.5em
@@ -496,7 +497,7 @@ figure.sl-about__img.hover img
 			height: 3px
 			width: 0%
 			content: ""
-			background-color: #2980b9
+			background-color: $accent-color
 		&::after 
 			left: 0
 			top: 0
@@ -516,6 +517,8 @@ figure.sl-about__img.hover img
 		&.active 
 			&::after
 				max-width: 100%
+			&::before
+				width: 100%
 
 
 
@@ -757,19 +760,26 @@ figure.sl-about__img.hover img
 		cursor: pointer
 		text-transform: uppercase
 		color: rgba(#fff, 0.9)
+		position: relative
+		transition: all ease-in-out 200ms
+		&::before
+			position: absolute
+			content: ""
+			bottom: -2px
+			left: 0
+			transition: all ease-in-out 300ms
+			height: 1px
+			width: 0%
+			background-color: $accent-color
 		&.active
 			color: $accent-color
 			position: relative
 			&::before
-				position: absolute
-				content: ""
-				bottom: -17px
-				left: 50%
-				transform: translateX(-50%)
-				border: 7px solid transparent
-				border-top: 10px solid lighten(#434a54, 5%)
+				width: 100%
 		&:hover
 			color: rgba(#fff, 1)
+			&::before
+					width: 100%
 	.tab_item
 		display: table
 		a 
