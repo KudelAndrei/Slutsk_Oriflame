@@ -472,25 +472,56 @@ figure.sl-about__img.hover img
 		transform:  skewX(-30deg)
 		width: 60%
 		height: 100%
+// стили кнопок
+.mixblock-filters * 
+	box-sizing: border-box
+
+.mixblock-filters
+	&__filter 
+		display: inline-block
+		margin: 0 1.5em
+		padding: 0.5em 0
+		color: rgba(255, 255, 255, 0.5)
+		position: relative
+		letter-spacing: 1px
+		text-decoration: none
+		text-transform: uppercase
+		cursor: pointer
+		&::before, &::after
+			position: absolute
+			transition: all 0.35s ease
+		&::before 
+			bottom: 0
+			display: block
+			height: 3px
+			width: 0%
+			content: ""
+			background-color: #2980b9
+		&::after 
+			left: 0
+			top: 0
+			padding: 0.5em 0
+			position: absolute
+			content: attr(data-hover)
+			color: #ffffff
+			white-space: nowrap
+			max-width: 0%
+			overflow: hidden
+		&:hover
+			&::before, &::after
+				opacity: 1
+				width: 100%
+			&::after
+				max-width: 100%
+		&.active 
+			&::after
+				max-width: 100%
+
+
+
 //плитки
 .mixblock
 	margin-bottom: 20px
-	&-filters
-		font-size: em(18)
-		font-family: "Work Sans", sans-serif
-		padding-bottom: 30px
-		&__filter
-			display: inline-block
-			padding: 0 7px
-			cursor: pointer
-			border-radius: 8px
-			text-transform: uppercase
-			margin: 5px 5px
-			&:hover
-				box-shadow: 0 0 0 2px #fff
-			&.active
-				background-color: $accent-color
-				color: #000
 	&__item
 		width: 28%
 		height: auto
