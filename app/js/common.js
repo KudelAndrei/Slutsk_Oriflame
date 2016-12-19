@@ -70,7 +70,7 @@ $(document).ready(function() {
 		arrows: true,
 		dots: true,
 		autoplay: true, //автоматический показ
-		autoplaySpeed: 1000, //время которое будет показан слайд
+		autoplaySpeed: 10000, //время которое будет показан слайд
 		speed: 1000, //время перехода слайда
 		dotsClass: "slick-dots", //указываем класс и стилизуем точки
 		prevArrow: '<div class="sl-arrow sl-arrow__left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>', // можем вставить любой элемент 
