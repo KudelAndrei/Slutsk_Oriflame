@@ -1,15 +1,23 @@
-$(document).ready(function() {
-
-	// мобильное меню при изменении экрана
-	$(window).on('load resize', windowSize); /// иницилизация функции
-	// Добавление класса мобильное меню
-	function windowSize(){
+function windowSize(){
 		if ($(window).width() <= '993'){
 				$('.menu').addClass("menu-mobile");
+				//$(window).on('load');
 		} else {
 				$('.menu').removeClass("menu-mobile");
 		}
 	}
+
+//	windowSize();
+
+
+
+$(document).ready(function() {
+
+
+		// Добавление класса мобильное меню
+	
+	// мобильное меню при изменении экрана
+	//$(window).on('load resize', windowSize); /// иницилизация функции
 
 	// ВЫравнивание блоков по высоте
 	$(".registration-advan__item").equalHeights(); 
@@ -69,12 +77,18 @@ $(document).ready(function() {
 	$(".sl-header").slick({
 		arrows: true,
 		dots: true,
-		autoplay: true, //автоматический показ
-		autoplaySpeed: 10000, //время которое будет показан слайд
-		speed: 1000, //время перехода слайда
 		dotsClass: "slick-dots", //указываем класс и стилизуем точки
 		prevArrow: '<div class="sl-arrow sl-arrow__left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>', // можем вставить любой элемент 
 		nextArrow: '<div class="sl-arrow sl-arrow__right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>', //по дефолту
+		responsive: [
+		 {
+			breakpoint: 800,
+			settings: {
+			  arrows: false,
+			  dots: false,
+			}
+		 }]
+	
 	});
 
 	//Слайдер О НАС
@@ -89,6 +103,13 @@ $(document).ready(function() {
 		arrows: true,
 		prevArrow: '<div class="sl-arrow sl-arrow__left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>', // можем вставить любой элемент 
 		nextArrow: '<div class="sl-arrow sl-arrow__right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>', //по дефолту
+		responsive: [
+		 {
+			breakpoint: 480,
+			settings: {
+			  arrows: false,
+			}
+		 }]
 	});
 
 
