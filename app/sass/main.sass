@@ -267,7 +267,7 @@ section
 		margin: 0 2px
 		.soc__link
 			display: inline-block
-			font-size: 15px
+			font-size: 14px
 			width: 25px
 			height: 25px
 			border-radius: 50%
@@ -294,26 +294,11 @@ section
 
 // слайдер шапки
 .sl-header
-	height: 500px
 	overflow: hidden
-	.bgi 
-		background-color: $header-color
-		width: 100%
-		height: 100%
-		background-position: top center
+	.sl-header__item
+		min-height: 600px
 		background-size: cover
-		background-repeat: no-repeat
-		opacity: .9
-		z-index: -1
-	&__slide
-		position: relative
-		color: #fff
-		min-height: 500px
-		padding-bottom: 60px
-	&__head
-		margin-top: 40px
-		margin-bottom: 30px
-		line-height: 1.2
+
 
 
 	// стрелки слайдера
@@ -359,8 +344,6 @@ section
 
 	// слайдер
 	.sl-about
-		max-height: 290px
-		overflow: hidden
 		.sl-arrow
 			top: 30%
 		&__content
@@ -585,13 +568,15 @@ figure.sl-about__img.hover img
 		img
 			position: relative
 			bottom: -3px
+			width: 100%
+			transition: transform 0.3s ease-in-out
 		time
 			position: absolute
 			right: -100%
 			opacity: 0
 			z-index: 2
 			color: rgba(#000, 0.9)
-			transition: all ease-in-out 350ms
+			transition: opacity, right, ease-in-out 350ms
 			bottom: 20px
 			font-weight: bold
 			display: inline-block
@@ -599,7 +584,7 @@ figure.sl-about__img.hover img
 			position: absolute
 			bottom: 20px
 			left: -100%
-			transition: all ease-in-out 350ms
+			transition: left, opacity, ease-in-out 350ms
 			z-index: 1
 			opacity: 0
 			font-size: 18px
@@ -614,7 +599,7 @@ figure.sl-about__img.hover img
 			height: 100%
 			background-color: #FFF
 			opacity: 0
-			transition: all ease-in-out 300ms
+			transition: top, opacity, ease-in-out 300ms
 		&:hover
 			&::before
 				top: 0
@@ -628,18 +613,9 @@ figure.sl-about__img.hover img
 				opacity: 1
 			h4::before
 				width: 100px
-		img
-			width: 100%
-			transition: all 300ms ease-in-out
-		&:hover
-			.mixblock__item--hover
-				height: 100%
-				opacity: 1
-				z-index: 10
-			.hever-wrap
-				top: 50%
 			img
-				transform: scale(1.1)
+				transform: scale(1.08)
+
 
 
 
@@ -653,7 +629,6 @@ figure.sl-about__img.hover img
 				background-color: #000
 	.sl-reviews
 		text-align: center
-		max-height: 440px
 		overflow: hidden
 		&__slide
 			padding: 0 45px

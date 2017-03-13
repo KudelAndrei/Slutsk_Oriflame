@@ -21,6 +21,7 @@ $(document).ready(function() {
 
 	// ВЫравнивание блоков по высоте
 	$(".registration-advan__item").equalHeights(); 
+	$(".mix").equalHeights(); 
 
 	/// плитки
 	$(".mixblock").mixItUp();
