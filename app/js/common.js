@@ -86,7 +86,6 @@ $(document).ready(function() {
 			breakpoint: 800,
 			settings: {
 			  arrows: false,
-			  dots: false,
 			}
 		 }]
 	
