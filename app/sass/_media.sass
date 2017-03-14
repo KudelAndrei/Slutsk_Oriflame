@@ -86,9 +86,19 @@
 	.panel-right
 		margin: 0
 		width: 100%
+	
+	.sl-header 
+		.sl-header__item 
+			.sl-header__content
+				background-color: rgba(#fff, .85)
+				border: 1px solid #222
+				padding: 20px
+				transform: translateY(-40%)
+				.sl-header__link
+					background-color: #fff
+					&:hover
+						background-color: rgba($accent-color, .7)
 
-	.sl-header__slide
-		padding: 0 25px
 
 	.write
 		padding-left: 30px
@@ -103,7 +113,19 @@
 	.sl-header
 		.slick-dots
 			bottom: 66px
-
+	.about 
+		.sl-about__item 
+			.sl-about__img
+				float: none
+				width: 100%
+				padding: 0 20px
+				display: block
+				margin-bottom: 20px
+			.sl-about__content
+				float: none 
+				width: 100%
+				margin-bottom: 20px
+			
 	.section__head
 		font-size: 30px
 	.section__desc
