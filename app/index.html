@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Slutsk Oriflame</title>
+	<title>Сайт Орифлейма в слуцке - Кудёлко Андрей</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -380,7 +380,7 @@
 
 										<div class="col-md-12">
 											<div class="btn-wrap">
-												<a href="#registration-form" class="btn popup-with-form">Присоедениться</a>
+												<a href="#registration-form" class="btn popup-with-zoom-anim">Присоедениться</a>
 											</div>
 										</div>
 
@@ -503,9 +503,47 @@
 		</div>
 	</div>
 
-	<div id="registration-form" class="mfp-hide mfp-hide white-popup-block">
-	 <iframe src="https://by.oriflame.com/business-opportunity/become-c.." scrolling="no" frameborder="0" width="450" height="1400"></iframe>
+	<div id="registration-form" class="zoom-anim-dialog mfp-hide ">
+	 <h1>Регистрация</h1>
+		<fieldset>
+			<p>Пожалуйста, заполните все необходимые поля.</p>
+			<ol>
+				<li>
+					<label for="name">Ваше ФИО:</label>
+					<input id="name" name="name" type="text" placeholder="Имя " required="">
+				</li>
+				<li>
+					<label for="email">Ваш телефон:</label>
+					<input id="tel" name="tel" type="tel" placeholder="+375 (29) 000-00-00" required="">
+				</li>
+				<li>
+					<label for="phone">Ваш mail:</label>
+					<input id="mail" name="mail" type="mail" placeholder="mail@mail.ru" required="">
+				</li>
+				<li>
+					<label for="textarea">Сообщение:</label><br>
+					<textarea id="textarea">Хочу подписаться на рассылку новостей, спасибо большое за вашу продукцию. Я очень довольна!</textarea>
+				</li>
+				<li>
+					<button class="btn">Регистриция</button>
+				</li>
+			</ol>
+		</fieldset>
 	</div>
+
+	<div id="preloader">
+		<div id="cssload-loader">
+			<div class="cssload-diamond"></div>
+			<div class="cssload-diamond"></div>
+			<div class="cssload-diamond"></div>
+		</div>
+	</div>
+
+	<script>
+		window.onload = function() {
+			document.getElementById('preloader').style.visibility="hidden";
+		};
+	</script>
 
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[

@@ -7,15 +7,12 @@ function windowSize(){
 		}
 	}
 
-//	windowSize();
-
-
+	// $(window).on('load', function() {
+  //   $('.preloader').fadeOut('slow', function() {});
+  // });
 
 $(document).ready(function() {
 
-
-		// Добавление класса мобильное меню
-	
 	// мобильное меню при изменении экрана
 	//$(window).on('load resize', windowSize); /// иницилизация функции
 
@@ -59,20 +56,18 @@ $(document).ready(function() {
 	}).eq(0).addClass("active");
 
 	// открытие регистрации
-	$('.popup-with-form').magnificPopup({
+	$('.popup-with-zoom-anim').magnificPopup({
 		type: 'inline',
+		fixedContentPos: false,
+		fixedBgPos: true,
+		overflowY: 'auto',
+		closeBtnInside: true,
 		preloader: false,
-	//	focus: '#name',
-		callbacks: {
-			beforeOpen: function() {
-				if($(window).width() < 700) {
-					this.st.focus = false;
-				} else {
-					this.st.focus = '#name';
-				}
-			}
-		}
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
 	});
+
 
 	//Слайдер шапки
 	$(".sl-header").slick({

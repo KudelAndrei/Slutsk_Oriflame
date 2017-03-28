@@ -28,6 +28,77 @@ p
 	font-family: "Open Sans", sans-serif
 	font-weight: normal
 
+/* прелоадер */
+#preloader
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: #fff
+	z-index: 100
+#cssload-loader
+	position: relative
+	left: 50%
+	top: 50%
+	width: 38px
+	height: 150px
+	transform: translate(-50%, -50%)
+
+#cssload-loader .cssload-diamond
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	margin: 0 auto
+	width: 38px
+	height: 38px
+	border-radius: 3px
+	background: rgb(0,0,0)
+	transform: translateY(0) rotate(45deg) scale(0)
+
+	animation: cssload-diamonds 1725ms linear infinite
+
+#cssload-loader .cssload-diamond:nth-child(1)
+	animation-delay: -1150ms
+
+#cssload-loader .cssload-diamond:nth-child(2) 
+	animation-delay: -2300ms
+
+#cssload-loader .cssload-diamond:nth-child(3)
+	animation-delay: -3450ms
+#cssload-loader .cssload-diamond:nth-child(4)
+	animation-delay: -4600ms
+
+@keyframes cssload-diamonds 
+	50% 
+		transform: translateY(-63px) rotate(45deg) scale(1)
+	100% 
+		transform: translateY(-125px) rotate(45deg) scale(0)
+
+@-o-keyframes cssload-diamonds 
+	50% 
+		-o-transform: translateY(-63px) rotate(45deg) scale(1)
+	100% 
+		-o-transform: translateY(-125px) rotate(45deg) scale(0)
+
+@-ms-keyframes cssload-diamonds 
+	50%
+		-ms-transform: translateY(-63px) rotate(45deg) scale(1)
+	100% 
+		-ms-transform: translateY(-125px) rotate(45deg) scale(0)
+
+@-webkit-keyframes cssload-diamonds 
+	50% 
+		-webkit-transform: translateY(-63px) rotate(45deg) scale(1)
+	100% 
+		-webkit-transform: translateY(-125px) rotate(45deg) scale(0)
+
+@-moz-keyframes cssload-diamonds 
+	50% 
+		-moz-transform: translateY(-63px) rotate(45deg) scale(1)
+	100% 
+		-moz-transform: translateY(-125px) rotate(45deg) scale(0)
 
 section
 	//min-height: 50vh
@@ -748,6 +819,9 @@ section
 	.btn-wrap
 		text-align: center
 
+	.form-registration
+
+
 ////  секция ОБРАТНОЙ СВЯЗИ /////
 .write
 	background-color: #f9f9f9
@@ -879,6 +953,87 @@ section
 		padding: 10px 0
 		color: rgba(#fff, 0.9)
 		background-color: darken(#434a54, 5%)
+
+
+
+/* стили для popup */
+#registration-form
+	background: white
+	padding: 20px 30px
+	text-align: left
+	max-width: 400px
+	margin: 40px auto
+	position: relative
+	li 
+		margin: 15px 0
+		input, textarea
+			display: block
+			width: 100%
+			padding: 5px 10px
+			margin: 2px 0
+			resize: none
+		textarea
+			height: 80px
+
+
+.my-mfp-zoom-in .zoom-anim-dialog
+	opacity: 0 
+	transition: all 0.2s ease-in-out
+	transform: scale(0.8)
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog 
+	opacity: 1 
+	transform: scale(1)
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog 
+	transform: scale(0.8)
+	opacity: 0
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg 
+	opacity: 0
+	transition: opacity 0.3s ease-out
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg 
+	opacity: 0.8
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg 
+	opacity: 0
+
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog
+	opacity: 0
+	transition: all 0.2s ease-out
+	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog
+	opacity: 1
+	transform: translateY(0) perspective( 600px ) rotateX( 0 )
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog 
+	opacity: 0
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg )
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg 
+	opacity: 0
+	transition: opacity 0.3s ease-out
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg 
+	opacity: 0.8
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg 
+	opacity: 0
+
+
 
 
 @import "media"
