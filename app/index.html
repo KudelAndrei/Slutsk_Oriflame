@@ -57,6 +57,16 @@
 
 <body class="main-body">
 
+	<!-- прелоадер -->
+	<div id="preloader">
+		<div id="cssload-loader">
+			<div class="cssload-diamond"></div>
+			<div class="cssload-diamond"></div>
+			<div class="cssload-diamond"></div>
+		</div>
+	</div>
+
+	
 	<div class="container-fluid clearfix">
 		<div class="row">
 			<!-- левая секция -->
@@ -531,19 +541,14 @@
 		</fieldset>
 	</div>
 
-	<div id="preloader">
-		<div id="cssload-loader">
-			<div class="cssload-diamond"></div>
-			<div class="cssload-diamond"></div>
-			<div class="cssload-diamond"></div>
-		</div>
-	</div>
-
 	<script>
 		window.onload = function() {
-			document.getElementById('preloader').style.visibility="hidden";
+			setTimeout(function(){
+				document.getElementById('preloader').style.visibility="hidden";
+			}, 500);
 		};
 	</script>
+
 
 	<!-- Optimized loading JS Start -->
 	<script>var scr = {"scripts":[

@@ -109,7 +109,7 @@ section
 .section	
 	color: #fff 
 	text-align: center
-	padding-bottom: 50px
+	padding-bottom: 40px
 	&__head
 		font-size: 36px
 		line-height: 40px
@@ -247,7 +247,6 @@ section
 	height: 100%
 	max-width: 100%
 
-
 // правая секция
 .panel-right
 	background-color: #ccc
@@ -366,7 +365,7 @@ section
 		background-size: cover
 		background-position: center 0
 		.sl-header__content
-			margin-top: 50%
+			margin-top: 45%
 			transform: translateY(-50%)
 			padding-right: 20px
 		.sl-header__categoria
@@ -575,6 +574,8 @@ section
 	&__item
 		width: 30%
 		display: block
+		min-height: 250px
+		max-width: 350px
 		height: auto
 		margin: 0 5px 20px
 		display: none
@@ -602,9 +603,10 @@ section
 				background-color: $accent-color
 				transform: translateX(-50%)
 		img
-			position: relative
-			bottom: -3px
-			width: 100%
+			position: absolute
+			bottom: 0
+			left: 0
+			max-width: 100%
 			transition: transform 0.3s ease-in-out
 		time
 			position: absolute

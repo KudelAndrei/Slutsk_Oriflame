@@ -7,9 +7,11 @@ function windowSize(){
 		}
 	}
 
-	// $(window).on('load', function() {
-  //   $('.preloader').fadeOut('slow', function() {});
-  // });
+window.onload = function() {
+		setTimeout(function(){
+			document.getElementById('preloader').style.visibility="hidden";
+		}, 500);
+	};
 
 $(document).ready(function() {
 
